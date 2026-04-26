@@ -1,0 +1,22 @@
+clear
+units           metal
+boundary        p p p
+atom_style      atomic
+
+read_data       AV1_APEX_Healed.data
+
+pair_style      hybrid eam/fs lj/cut 6.0
+pair_coeff      * * eam/fs AlFe_mm.eam.fs Fe Al Fe NULL NULL
+# (Insert lj/cut coefficients here)
+
+# TENSILE DEFORMATION
+# L0 setup for strain calculation
+variable        L0 equal 55.64
+fix             1 all npt temp 300.0 300.0 0.1 y 1.0 1.0 1.0 z 1.0 1.0 1.0
+fix             2 all deform 1 x erate 0.01 units box
+
+thermo          100
+thermo_style    custom step temp lx ly lz press pxx
+run             5000
+
+write_data      AV1_APEX_Fracture.data

@@ -1,0 +1,24 @@
+clear
+units           metal
+boundary        p p p
+atom_style      atomic
+
+read_data       job.lmpdat
+replicate       12 12 25
+
+pair_style      hybrid eam/fs lj/cut 6.0
+pair_coeff      * * eam/fs AlFe_mm.eam.fs Fe Al Fe NULL NULL
+pair_coeff      4 4 lj/cut 5.0 2.3
+pair_coeff      5 5 lj/cut 5.0 2.8
+pair_coeff      4 5 lj/cut 5.0 2.5
+pair_coeff      1 4 lj/cut 1.0 2.0
+pair_coeff      2 4 lj/cut 1.0 2.0
+pair_coeff      3 4 lj/cut 1.0 2.0
+pair_coeff      1 5 lj/cut 1.0 2.0
+pair_coeff      2 5 lj/cut 1.0 2.0
+pair_coeff      3 5 lj/cut 1.0 2.0
+
+fix             1 all npt temp 300.0 300.0 0.1 iso 1.0 1.0 1.0
+thermo          500
+run             5000
+write_data      baseline.data
