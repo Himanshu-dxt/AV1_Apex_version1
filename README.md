@@ -17,7 +17,7 @@ recrystallization, turning impact energy into structural hardening.
 ## Credits & Tools
 
 ### Lead Researcher / Architect
-* **[Your Name/Handle]** - Concept design, chemical composition strategy, and simulation execution.
+* **Himanshu Kumar Dixit** - Concept design, chemical composition strategy, and simulation execution.
 
 ### AI Collaboration
 * **Gemini (Google AI)** - Collaborative lead on script optimization, physics error troubleshooting (recursion & Lost Atom fixes), and data analysis.
