@@ -13,3 +13,19 @@ It utilizes a **Silicon-Titanium Cage** to stabilize a **Molten Aluminum-Iron ma
 ### Conclusion
 AV1 Apex demonstrates "Lattice Memory," where the Si-Ti skeleton acts as a template for 
 recrystallization, turning impact energy into structural hardening.
+
+## Credits & Tools
+
+### Lead Researcher / Architect
+* **[Your Name/Handle]** - Concept design, chemical composition strategy, and simulation execution.
+
+### AI Collaboration
+* **Gemini (Google AI)** - Collaborative lead on script optimization, physics error troubleshooting (recursion & Lost Atom fixes), and data analysis.
+
+### Software & Potentials
+* **LAMMPS (Large-scale Atomic/Molecular Massively Parallel Simulator)** - Primary molecular dynamics engine.
+* **Axel Kohlmeyer** - For the foundational plugins and community support integrated into the LAMMPS environment.
+* **Potential Files:** Based on the `AlFe_mm.eam.fs` formalism (Mishin et al.) for high-accuracy metallic matrix modeling.
+
+### Special Thanks
+* To the open-source materials science community for providing the interatomic potentials that made this hybrid simulation possible.
